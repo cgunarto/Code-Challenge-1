@@ -45,14 +45,17 @@
         self.rightNavButton.enabled = NO;
     }
 
+    [self.leftNumberTextField resignFirstResponder];
+    [self.rightNumberTextField resignFirstResponder];
+
 }
 
-//!!! Need to retest this code...
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [textField resignFirstResponder];
-    return YES;
-}
+//!!! NEED TO come bac to this code later to see how to resign keyboard with delegate
+//- (BOOL)textFieldShouldReturn:(UITextField *)textField
+//{
+//    [textField resignFirstResponder];
+//    return NO;
+//}
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
