@@ -45,12 +45,14 @@
         self.rightNavButton.enabled = NO;
     }
 
+    // Hacky way of getting rid of keyboard... need to change this after code below is fixed
     [self.leftNumberTextField resignFirstResponder];
     [self.rightNumberTextField resignFirstResponder];
 
 }
 
-//!!! NEED TO come bac to this code later to see how to resign keyboard with delegate
+//!!! NEED TO come bac to this code later to see how to resign keyboard with delegation
+// code below isn't right, needs to be redone
 //- (BOOL)textFieldShouldReturn:(UITextField *)textField
 //{
 //    [textField resignFirstResponder];
@@ -59,7 +61,7 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // passing the nameTextField text to the webVC's title
+    // passing the result of the multiplication to the webVC's title
     WebViewController *webVC = segue.destinationViewController;
     webVC.title = self.resultString;
 }

@@ -103,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1282" y="362"/>
+            <point key="canvasLocation" x="1258" y="362"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="tcK-H4-3gz">
@@ -118,22 +118,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KmS-wt-wqu">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="delegate" destination="4n8-w7-O2l" id="5vF-37-6xf"/>
                                 </connections>
                             </webView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="CVZ-00-c0e">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="CVZ-00-c0e">
                                 <rect key="frame" x="150" y="274" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="Jza-Wk-QyC"/>
+                                    <constraint firstAttribute="height" constant="20" id="myQ-ex-lsX"/>
+                                </constraints>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="KmS-wt-wqu" secondAttribute="trailing" constant="-16" id="3gM-fp-H7m"/>
                             <constraint firstItem="KmS-wt-wqu" firstAttribute="leading" secondItem="j0A-sj-WOD" secondAttribute="leadingMargin" constant="-16" id="ZgP-5C-wek"/>
-                            <constraint firstItem="UOX-69-gTJ" firstAttribute="top" secondItem="KmS-wt-wqu" secondAttribute="bottom" id="r4O-8p-Sjr"/>
-                            <constraint firstItem="KmS-wt-wqu" firstAttribute="top" secondItem="cdl-fe-uID" secondAttribute="bottom" id="rj0-jg-bLp"/>
+                            <constraint firstItem="KmS-wt-wqu" firstAttribute="bottom" secondItem="j0A-sj-WOD" secondAttribute="bottomMargin" id="c4M-dz-01m"/>
+                            <constraint firstAttribute="centerX" secondItem="CVZ-00-c0e" secondAttribute="centerX" id="jPu-EA-CJX"/>
+                            <constraint firstItem="KmS-wt-wqu" firstAttribute="top" secondItem="j0A-sj-WOD" secondAttribute="topMargin" id="va0-EB-N6k"/>
+                            <constraint firstAttribute="centerY" secondItem="CVZ-00-c0e" secondAttribute="centerY" id="zCd-yc-7d0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NOe-tA-DYt"/>
